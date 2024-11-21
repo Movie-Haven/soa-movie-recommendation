@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendations - Movie Haven</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><a href="#home">🎥 Movie Haven</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#search">Search</a>
+      <a href="#popular">Popular</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="recommendations.html">Recommendations</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Personalized Recommendations</h1>
+      <p>Discover new movies based on your favorites and search history!</p>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section id="recommendations" class="movies-section">
+    <h2>Recommended for You</h2>
+    <div class="movie-grid" id="recommendations-movie-grid">
+      <!-- Recommended movies will be dynamically inserted here -->
+    </div>
+  </section>
+  <div id="recommendations-movie-grid">
+    <p>No recommendations available. Try adding some favorites or searching for movies!</p>
+</div>
+<button id="load-more-button" style="display: none;">Load More</button>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Movie Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/recommendations.js"></script>
+</body>
+</html>

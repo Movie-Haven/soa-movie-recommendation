@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Haven</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><a href="#home">🎥 Movie Haven</a></div>
+    <nav>
+      <a href="#home" class="home-link">Home</a>
+      <a href="#search">Search</a>
+      <a href="#popular">Popular</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="recommendations.html">Recommendations</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Movie Haven</h1>
+      <p>Discover your next favorite movie, curated just for you!</p>
+      <form id="search-form">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for a movie..."
+          />
+          <div class="search-type-container">
+            <button type="button" id="search-type-toggle">By Name</button>
+            <div id="search-type-options" class="search-type-options">
+              <button type="button" id="search-by-name">By Name</button>
+              <button type="button" id="search-by-genre">By Genre</button>
+            </div>
+          </div>
+          <button type="submit" id="search-button">Search</button>
+          <button type="button" id="cancel-search" class="cancel-btn" style="display: none;">&times;</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Search Section (initially hidden) -->
+  <section id="search" class="movies-section" style="display: none;">
+    <h2>Search Results</h2>
+    <div class="movie-grid" id="search-movie-grid"></div>
+  </section>
+
+  <!-- Popular Movies Section -->
+  <section id="popular" class="movies-section">
+    <h2>Popular Movies</h2>
+    <div class="movie-grid" id="popular-movie-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Movie Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
