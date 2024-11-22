@@ -100,30 +100,17 @@ async function displayMovies(movies, gridElement) {
 let favorites = [];
 // Toggle movie in/out of favorites
 function toggleFavorite(movieId) {
-  const movieCard = document.querySelector(`[data-movie-id="${movieId}"] .favorite-icon`);
-
   if (favorites.includes(movieId)) {
     // Remove from favorites if already there
     favorites = favorites.filter(id => id !== movieId);
     removeFromFavoritesTMDB(movieId);
     alert('Removed from Favorites!');
-    
-    // Update the star icon to show it's not favorited anymore
-    if (movieCard) {
-      movieCard.innerHTML = '☆'; // Change to empty star
-    }
   } else {
     // Add to favorites if not already there
     favorites.push(movieId);
     addToFavoritesTMDB(movieId);
     alert('Added to Favorites!');
-    
-    // Update the star icon to show it's favorited
-    if (movieCard) {
-      movieCard.innerHTML = '⭐'; // Change to filled star
-    }
   }
-}
   // Re-render the movies to update the star icon status
   fetchPopularMovies();
 }
